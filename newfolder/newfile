@@ -1,2 +1,36 @@
+#!/bin/bash
 
+# WHILE 
+
+# var = ip a | grep -E '^[0-9]' | cut -d: -f2 | sed -e '/lo/d;s/ //'
+
+
+
+# while [-z $(read -p "ecris un truc" truc)] do
+# # echo "action
+
+# echo "c pas conforme"
+
+
+# done
+echo "ecris la date du jour au format jj-mm-aa ou jj-mois-aa"
+read date
+
+while
+!([ "$date"= '04-07-22' ] || ["$date" = '04-juillet-22'])
+do
+echo "valeur non conforme"
+read date
+done
+
+# until [ "$date" = 04-07-22 ] || [ "$date" = 04-Juillet-22 ]
+# do
+# echo "valeur non conforme"
+# read date
+# done
+
+
+echo "tu as ecris la date:  $date"
+
+exit 0
 uveau
